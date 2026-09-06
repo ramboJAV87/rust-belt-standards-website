@@ -1,0 +1,15 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Local tooling
+node_modules/
+.vercel
+
+# Local editor/tooling config
+.claude/
