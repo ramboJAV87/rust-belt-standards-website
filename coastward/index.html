@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coastward — Group trip planning, without the 40-message group chat</title>
+<meta name="description" content="Coastward is a group trip planning app from Rust Belt Standards. Roster, dates, destinations, lodging, expenses, meals, activities, and photos in one shared place. Currently in private beta.">
+<link rel="canonical" href="https://rustbeltstandards.com/coastward">
+<meta name="theme-color" content="#1C2B39">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rust Belt Standards LLC">
+<meta property="og:title" content="Coastward — All the planning, none of the stress.">
+<meta property="og:description" content="Group trip planning, without the 40-message group chat.">
+<meta property="og:url" content="https://rustbeltstandards.com/coastward">
+<meta property="og:image" content="https://rustbeltstandards.com/assets/coastward/coastward-icon.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/assets/coastward/coastward-icon-32.png" sizes="32x32">
+<link rel="icon" href="/assets/coastward/coastward-icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/coastward/coastward-icon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/coastward/coastward.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Coastward",
+  "applicationCategory": "TravelApplication",
+  "operatingSystem": "iOS, Android",
+  "description": "Group trip planning, without the 40-message group chat.",
+  "url": "https://rustbeltstandards.com/coastward",
+  "image": "https://rustbeltstandards.com/assets/coastward/coastward-icon.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rust Belt Standards LLC",
+    "url": "https://rustbeltstandards.com/",
+    "email": "support@rustbeltstandards.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="cw-header">
+  <div class="wrap">
+    <div class="cw-brand-group">
+      <a class="cw-brand" href="/coastward" aria-label="Coastward">
+        <img src="/assets/coastward/coastward-icon.png" alt="" width="34" height="34">
+        <span>Coastward</span>
+      </a>
+      <a class="cw-by" href="/">by Rust Belt Standards</a>
+    </div>
+    <nav class="cw-nav" aria-label="Coastward">
+      <a href="#features">Features</a>
+      <a href="#roadmap">What's next</a>
+      <a class="btn btn-rust btn-sm" href="#get-involved">Get involved</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ Hero ============================ -->
+  <section class="cw-hero">
+    <div class="wrap">
+      <div class="cw-hero-inner">
+        <div>
+          <img class="cw-hero-icon" src="/assets/coastward/coastward-icon.png"
+               alt="Coastward app icon" width="76" height="76">
+          <p class="mono cw-hero-stamp teal-dot">Private beta &middot; Mobile app</p>
+          <h1>All the planning, <span>none of the stress.</span></h1>
+          <p class="cw-hero-sub">Group trip planning, without the <span class="nowrap">40-message</span> group chat.</p>
+          <div class="cw-hero-actions">
+            <a class="btn btn-rust" href="#get-involved">Get involved</a>
+            <a class="btn btn-line" href="#features">See how it works</a>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT PLACEHOLDER: hero. Replace the .shot-placeholder div with
+             <img src="/assets/coastward/screenshots/hero.png" alt="Coastward trip dashboard"> -->
+        <div class="shot" data-screenshot="hero">
+          <div class="shot-placeholder">
+            <span class="mono">Screenshot placeholder</span>
+            <strong>Hero app screenshot</strong>
+            <code>screenshots/hero.png</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg class="cw-horizon" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 16 C 180 2, 360 2, 540 16 S 900 30, 1080 16 S 1350 4, 1440 12"
+            fill="none" stroke="#1C2B39" stroke-opacity=".16" stroke-width="1.5"
+            vector-effect="non-scaling-stroke"/>
+      <path d="M0 32 C 180 18, 360 18, 540 32 S 900 46, 1080 32 S 1350 20, 1440 28"
+            fill="none" stroke="#C89B3C" stroke-opacity=".7" stroke-width="1.5"
+            vector-effect="non-scaling-stroke"/>
+    </svg>
+  </section>
+
+  <!-- ======================= Why it exists ======================= -->
+  <section class="cw-why" id="why">
+    <div class="wrap">
+      <div class="cw-why-inner">
+        <div class="cw-why-copy">
+          <h2>Too many decisions, scattered across too many text threads.</h2>
+          <p>Every group trip runs into the same problem. The decisions pile up,
+            and they end up spread across a group chat, a shared spreadsheet, and
+            whoever happens to remember what was agreed. Coastward puts all of it
+            in one shared place, so the group can plan together instead of
+            planning around each other.</p>
+          <p>Rust Belt Standards builds practical tools for real problems, and
+            this one started with a familiar one: planning trips with family and
+            friends. Coastward is built to do better than the group chat — simple
+            enough for anyone in the group to use, without anyone having to be
+            &ldquo;the organized one.&rdquo;</p>
+        </div>
+
+        <div>
+          <ul class="cw-questions">
+            <li><span class="mono">01</span>Who's actually coming?</li>
+            <li><span class="mono">02</span>What dates work for everyone?</li>
+            <li><span class="mono">03</span>Where are we staying?</li>
+            <li><span class="mono">04</span>Who's paying for what?</li>
+          </ul>
+          <p class="cw-questions-note">Coastward answers each of these in the app,
+            <strong>where the whole group can see the answer.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== Features ========================== -->
+  <section class="cw-features" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Everything the trip needs, in one shared app.</h2>
+        <p>From figuring out who's in, to deciding where to go, to the trip
+          itself. Everyone in the group sees the same plan.</p>
+      </div>
+
+      <h3 class="cw-group-title">Getting the group to a plan</h3>
+
+      <!-- 01 Roster -->
+      <article class="cw-feature" id="roster">
+        <div class="cw-feature-text">
+          <span class="mono cw-feature-no">01</span>
+          <h4>Roster</h4>
+          <p>See who's confirmed, who's maybe, and who hasn't answered yet.
+            Travelers are grouped by household, so families are counted the way
+            they actually travel.</p>
+        </div>
+        <!-- SCREENSHOT PLACEHOLDER: roster -->
+        <div class="shot" data-screenshot="roster">
+          <div class="shot-placeholder">
+            <span class="mono">Screenshot placeholder</span>
+            <strong>Roster</strong>
+            <code>screenshots/roster.png</code>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Trip dates & destinations -->
+      <article class="cw-feature is-flipped" id="dates-destinations">
+        <div class="cw-feature-text">
+          <span class="mono cw-feature-no">02</span>
+          <h4>Trip dates &amp; destinations</h4>
+          <p>Propose options, everyone votes, and the group lands on an answer.
+            Destinations and lodging work the same way, with ratings, so the
+            favorite is obvious instead of argued over.</p>
+        </div>
+        <!-- SCREENSHOT PLACEHOLDER: dates & destinations -->
+        <div class="shot" data-screenshot="dates-destinations">
+          <div class="shot-placeholder">
+            <span class="mono">Screenshot placeholder</span>
+            <strong>Trip dates &amp; destinations</strong>
+            <code>screenshots/dates-destinations.png</code>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Expenses -->
+      <article class="cw-feature" id="expenses">
+        <div class="cw-feature-text">
+          <span class="mono cw-feature-no">03</span>
+          <h4>Expenses</h4>
+          <p>Log what's spent and split it fairly, per traveler or per household,
+            so nobody is doing the math on a napkin after the trip.</p>
+        </div>
+        <!-- SCREENSHOT PLACEHOLDER: expenses -->
+        <div class="shot" data-screenshot="expenses">
+          <div class="shot-placeholder">
+            <span class="mono">Screenshot placeholder</span>
+            <strong>Expenses</strong>
+            <code>screenshots/expenses.png</code>
+          </div>
+        </div>
+      </article>
+
+      <h3 class="cw-group-title">Once the plan is locked in</h3>
+
+      <div class="cw-mini-grid">
+        <!-- 04 Meals & shopping list -->
+        <article class="cw-mini" id="meals-shopping">
+          <!-- SCREENSHOT PLACEHOLDER: meals & shopping list -->
+          <div class="shot" data-screenshot="meals-shopping">
+            <div class="shot-placeholder">
+              <span class="mono">Placeholder</span>
+              <strong>Meals &amp; shopping</strong>
+              <code>screenshots/meals-shopping.png</code>
+            </div>
+          </div>
+          <div>
+            <h4><span class="mono">04</span>Meals &amp; shopping list</h4>
+            <p>Plan who's cooking what and keep one shared list.</p>
+          </div>
+        </article>
+
+        <!-- 05 Activities -->
+        <article class="cw-mini" id="activities">
+          <!-- SCREENSHOT PLACEHOLDER: activities -->
+          <div class="shot" data-screenshot="activities">
+            <div class="shot-placeholder">
+              <span class="mono">Placeholder</span>
+              <strong>Activities</strong>
+              <code>screenshots/activities.png</code>
+            </div>
+          </div>
+          <div>
+            <h4><span class="mono">05</span>Activities</h4>
+            <p>A shared plan for what the group wants to do.</p>
+          </div>
+        </article>
+
+        <!-- 06 Photos -->
+        <article class="cw-mini" id="photos">
+          <!-- SCREENSHOT PLACEHOLDER: photos -->
+          <div class="shot" data-screenshot="photos">
+            <div class="shot-placeholder">
+              <span class="mono">Placeholder</span>
+              <strong>Photos</strong>
+              <code>screenshots/photos.png</code>
+            </div>
+          </div>
+          <div>
+            <h4><span class="mono">06</span>Photos</h4>
+            <p>A shared trip album, with the option to set a cover photo.</p>
+          </div>
+        </article>
+
+        <!-- 07 Emergency info -->
+        <article class="cw-mini" id="emergency-info">
+          <!-- SCREENSHOT PLACEHOLDER: emergency info -->
+          <div class="shot" data-screenshot="emergency-info">
+            <div class="shot-placeholder">
+              <span class="mono">Placeholder</span>
+              <strong>Emergency info</strong>
+              <code>screenshots/emergency-info.png</code>
+            </div>
+          </div>
+          <div>
+            <h4><span class="mono">07</span>Emergency info</h4>
+            <p>Key contacts and details in one place.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Beta + roadmap ===================== -->
+  <section class="cw-status" id="beta">
+    <div class="wrap">
+      <div class="cw-status-inner">
+        <div>
+          <h2>Currently in beta.</h2>
+          <p>Coastward is in private beta testing with a small group of real
+            users. We're actively building based on what we learn from them
+            before opening things up further.</p>
+        </div>
+
+        <div id="roadmap">
+          <h2>What's coming next.</h2>
+          <ul class="cw-roadmap">
+            <li>Push notifications</li>
+            <li>Weather built into the trip view</li>
+            <li>Receipt uploads on expenses</li>
+            <li>Shareable trip recaps after the trip wraps</li>
+            <li>Photo albums, physical and digital</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= Get involved ========================= -->
+  <section class="cw-cta" id="get-involved">
+    <div class="wrap">
+      <div class="cw-cta-inner">
+        <img class="cw-cta-icon" src="/assets/coastward/coastward-icon.png"
+             alt="" width="88" height="88">
+        <div>
+          <h2>Interested in trying Coastward?</h2>
+          <p>Reach out at
+            <a href="mailto:support@rustbeltstandards.com?subject=Coastward">support@rustbeltstandards.com</a>
+            and tell us a little about your group and the trip you're planning.</p>
+          <div class="cw-cta-actions">
+            <a class="btn btn-rust" href="mailto:support@rustbeltstandards.com?subject=Coastward">Email us about Coastward</a>
+            <a class="btn btn-line" href="/">More from Rust Belt Standards</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="cw-footer">
+  <div class="wrap">
+    <div class="cw-footer-top">
+      <div>
+        <div class="cw-footer-brand">
+          <img src="/assets/coastward/coastward-icon.png" alt="" width="30" height="30">
+          Coastward
+        </div>
+        <a class="cw-footer-parent" href="/">
+          <img src="/assets/brand/rbs-mark.svg" alt="" width="20" height="20">
+          A Rust Belt Standards product
+        </a>
+      </div>
+      <nav class="cw-footer-links" aria-label="Footer">
+        <a href="/">Rust Belt Standards</a>
+        <a href="mailto:support@rustbeltstandards.com">support@rustbeltstandards.com</a>
+        <a href="/privacy.html">Privacy policy</a>
+      </nav>
+    </div>
+    <div class="cw-footer-bottom">
+      <span>&copy; 2026 Rust Belt Standards LLC. All rights reserved.</span>
+      <span class="mono">Medina, Ohio</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

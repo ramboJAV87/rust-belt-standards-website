@@ -1,6 +1,6 @@
 # rustbeltstandards.com
 
-Single-page marketing site for **Rust Belt Standards LLC** (Medina, Ohio) and its
+Marketing site for **Rust Belt Standards LLC** (Medina, Ohio) and its
 two products, Coastward and ChuckEd.
 
 Plain static HTML and CSS — no build step, no framework, no backend.
@@ -8,13 +8,14 @@ Plain static HTML and CSS — no build step, no framework, no backend.
 ## Structure
 
 ```
-index.html          The single page: hero, products, philosophy, contact
+index.html          Homepage: hero, products, philosophy, contact
+coastward/          Coastward landing page (/coastward), with its own stylesheet
 privacy.html        Privacy policy
-styles.css          All styles
+styles.css          Homepage + privacy page styles
 site.webmanifest    PWA/manifest icons
 robots.txt          / sitemap.xml
 assets/brand/       RBS logo kit files actually used by the site
-assets/coastward/   Coastward app icon
+assets/coastward/   Coastward app icon, favicon sizes, and screenshots/
 assets/chucked/     ChuckEd logo
 website-assets/     Source-of-truth brand kits, brand guides, and the design brief
 ```
@@ -41,6 +42,16 @@ directly) is preferable because the site uses root-relative paths like
 Import the GitHub repo in Vercel and deploy with framework preset **Other** —
 no build command, output directory is the repo root. `vercel.json` sets
 `cleanUrls` so `/privacy` also resolves.
+
+## Coastward screenshots
+
+The Coastward page has clearly marked placeholder frames for eight screenshots
+(hero + one per feature). Each is a `<div class="shot" data-screenshot="NAME">`
+in `coastward/index.html` containing a `.shot-placeholder`. To swap one in, drop
+the image into `assets/coastward/screenshots/` and replace the placeholder div
+with `<img src="/assets/coastward/screenshots/NAME.png" alt="...">`. The frame
+is sized for a portrait phone screenshot (1179 × 2556); other portrait sizes
+are cropped to fit. See `assets/coastward/screenshots/README.md` for filenames.
 
 ## Design notes
 

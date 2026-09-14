@@ -435,6 +435,18 @@ p { margin: 0; }
 .card-coastward .card-list li::before { background: var(--cw-teal); }
 .card-coastward .status { color: var(--cw-teal); }
 .card-coastward .card-meta { color: rgba(28,43,57,.55); }
+.card-coastward .card-title-link { text-decoration: none; }
+.card-coastward .card-title-link:hover { color: var(--cw-rust); }
+.card-coastward .card-link {
+  margin-left: auto;
+  color: var(--cw-rust);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(187,74,46,.35);
+  transition: border-color .15s ease;
+}
+.card-coastward .card-link:hover { border-bottom-color: var(--cw-rust); }
 
 /* -- ChuckEd: its own palette, inside its own card. -- */
 .card-chucked {
